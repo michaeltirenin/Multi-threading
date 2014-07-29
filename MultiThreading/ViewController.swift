@@ -32,14 +32,14 @@ class ViewController: UIViewController {
         myQueue.addOperationWithBlock({() -> Void in
             
             var data = NSData(contentsOfURL: url)
+            
             NSOperationQueue.mainQueue().addOperationWithBlock( {() -> Void in
             
                     var myImage = UIImage(data: data)
                 
                     self.imageView.image = myImage
-                })
-            
             })
+        })
     }
 }
 
